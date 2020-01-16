@@ -1,0 +1,94 @@
+*Pract11 Output:
+D:\PROJECTS\dotNet>Pract11
+Enter your name:
+Yogesh
+Enter country name:
+India
+Hello Yogesh from coutry India!
+
+D:\PROJECTS\dotNet>
+======================================================================================
+
+*Pract12 Output:
+D:\PROJECTS\dotNet>Pract12
+Enter number of raws:
+3
+Enter number of cols:
+4
+Enter character:
+#
+####
+####
+####
+
+D:\PROJECTS\dotNet>
+=======================================================================================
+
+*Pract13 Output:
+D:\PROJECTS\dotNet>Pract13
+Enter a integer number:
+12321
+
+Output:
+
+one     two     three   two     one
+
+D:\PROJECTS\dotNet>
+
+=======================================================================================
+
+
+*Pract14 Output:
+
+D:\PROJECTS\dotNet>Pract14
+This is a currency converter for USD,INR,FRANC,EURO!!!
+
+Enter type:
+Enter 1.INR:
+Enter 2.USD:
+Enter 3.FRANC:
+Enter 4.EURO:
+Enter 5.EXIT:
+Enter source currency:
+3
+Enter destination currency:
+2
+Enter Amount:
+123
+ Answer is = 126.322463261022
+Enter type:
+Enter 1.INR:
+Enter 2.USD:
+Enter 3.FRANC:
+Enter 4.EURO:
+Enter 5.EXIT:
+Enter source currency:
+1
+Enter destination currency:
+2
+Enter Amount:
+76
+ Answer is = 1.06368089573128
+Enter type:
+Enter 1.INR:
+Enter 2.USD:
+Enter 3.FRANC:
+Enter 4.EURO:
+Enter 5.EXIT:
+Enter source currency:
+5
+
+D:\PROJECTS\dotNet>
+
+=======================================================================================
+
+
+*Pract15 Output:
+
+
+
+
+
+/*OUTPUT:
+_
+*/
