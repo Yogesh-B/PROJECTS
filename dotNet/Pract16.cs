@@ -11,7 +11,7 @@ public class Pract16
 		Numbers num=new Numbers();
 		while(true)
 		{	
-			Console.WriteLine("\n\n");
+			Console.WriteLine("\n");
 			Console.WriteLine("#Decimal to :");
 			Console.WriteLine("1.Binary:");
 			Console.WriteLine("2.Octal:");
@@ -70,6 +70,41 @@ public class Numbers
 
 
 /*OUTPUT:
+D:\PROJECTS\dotNet>Pract16
+                        !!!...This is a Number system converter...!!!
 
+
+
+#Decimal to :
+1.Binary:
+2.Octal:
+3.Hexadecimal:
+4.Exit:
+Enter Destination Type:
+1
+Enter value:21
+
+Answer is = 0000000000010101
+
+#Decimal to :
+1.Binary:
+2.Octal:
+3.Hexadecimal:
+4.Exit:
+Enter Destination Type:
+2
+Enter value:9
+
+Answer is = 0000000000000011
+
+#Decimal to :
+1.Binary:
+2.Octal:
+3.Hexadecimal:
+4.Exit:
+Enter Destination Type:
+4
+
+D:\PROJECTS\dotNet>_
 
 */
