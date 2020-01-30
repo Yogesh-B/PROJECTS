@@ -14,6 +14,7 @@ Use following Java Statement interface to implement program:
 3. Callable Statement 
 */
 import java.sql.*;
+import java.util.Scanner;
 
 public class JDBC1
 {
@@ -33,24 +34,51 @@ public class JDBC1
         
          String query="select * from branch";
         try{
+            
             Class.forName(JDBC_driver);
             conn=DriverManager.getConnection(url,usr,passwd);
+            String sql;
+            Scanner sc=new Scanner(System.in);
+                    //(a)create database 
             stmt=conn.createStatement();
+            System.out.println("Enter 1 & Press Enter To create database & table using Statement");
+            System.out.println("Creating database and table using Statement...");
+            sql="CREATE DATABASE demo";
+            stmt.executeUpdate(sql);
+            stmt.executeUpdate("USE demo");
             
-         
+                    //(b)create table
+            sql="CREATE TABLE student (Enroll BIGINT(12),Name VARCHAR(30),Department VARCHAR(10),Semester INT)";
+            stmt.executeUpdate(sql);
+            System.out.println("CREATED DATABASE AND TABLE USING Statement...\nEnter 1 and press enter to continue...");
+            int n=sc.nextInt();//for getting eEnterKey
+                   
+                   
+                   /*(c)insert records using Statement,PreparedStatement,CallableStatement*/
+                //...using Statement
+            System.out.println("\n\nInserting data...");
+            stmt.executeUpdate("INSERT INTO student VALUES(170200107001,'Aman','CE',3)");
+            System.out.println("Data Inserted Using Statement...");
+                //...using PreparedStatement 
+            sql = "INSERT INTO student VALUES(?,?,?,?);";
             
             
             
-            rs.close();
+            
+            
+            
+            // rs.close();
             stmt.close();
-            pstmt.close();
-            cstmt.close();
+            // pstmt.close();
+            // cstmt.close();
             conn.close();
         }
-        catch(SQLException se){
+        catch(SQLException se)
+        {
 			se.printStackTrace();
 		}
-		catch(Exception e) {
+		catch(Exception e)
+        {
 			e.printStackTrace();
 		}
         finally
