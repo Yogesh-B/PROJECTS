@@ -1,8 +1,8 @@
 drop PROCEDURE if exists Add;
 DELIMITER //
-CREATE PROCEDURE demo.Add(IN enroll BIGINT, IN name1 VARCHAR(100), IN dept VARCHAR(50), IN sem INT)
+CREATE PROCEDURE demo.Add(IN enroll1 BIGINT, IN name1 VARCHAR(100), IN dept VARCHAR(50), IN sem INT)
 BEGIN
-	INSERT INTO student VALUES (enroll,name1,dept,sem);
+	INSERT INTO student VALUES (enroll1,name1,dept,sem);
 END//
 DELIMITER ;
 
@@ -12,9 +12,9 @@ DELIMITER ;
 drop PROCEDURE if exists demo.Change;
 
 DELIMITER //
-CREATE PROCEDURE demo.Change(IN enroll BIGINT,IN sem INT)
+CREATE PROCEDURE demo.Change(IN enroll1 BIGINT,IN sem INT)
 BEGIN
-	UPDATE student SET Semester=sem WHERE Enroll=enroll ;
+	UPDATE student SET Semester=sem WHERE Enroll=enroll1 ;
 END//
 DELIMITER ;
 
@@ -25,8 +25,8 @@ DELIMITER ;
 
 drop PROCEDURE if exists demo.Remove;
 DELIMITER //
-CREATE PROCEDURE demo.Remove(IN enroll BIGINT	)
+CREATE PROCEDURE demo.Remove(IN enroll1 BIGINT	)
 BEGIN
-	DELETE FROM Student WHERE Enroll=enroll;
+	DELETE FROM Student WHERE Enroll=enroll1;
 END//	
 DELIMITER ;
