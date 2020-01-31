@@ -14,7 +14,6 @@ Use following Java Statement interface to implement program:
 3. Callable Statement 
 */
 import java.sql.*;
-import java.util.Scanner;
 
 public class JDBC1
 {
@@ -33,8 +32,9 @@ public class JDBC1
         CallableStatement cstmt = null;   
         
          
-        try{
-            
+        try
+        {
+             
             Class.forName(JDBC_driver);
                     /*(a)connect to database*/
             conn=DriverManager.getConnection(url,usr,passwd);
