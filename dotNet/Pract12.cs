@@ -21,7 +21,7 @@ public class P2
 		{
 			for(int j=0;j<cols;j++)
 			{
-				Console.Write(c);
+				Console.Write(c+" ");
 			}
 			Console.WriteLine();
 		}			
