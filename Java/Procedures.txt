@@ -64,7 +64,7 @@ CREATE FUNCTION totalNameStartingWith(value VARCHAR(10))
     RETURNS INT
     BEGIN
         DECLARE result INT;
-        SELECT COUNT(*) INTO result FROM `employee` WHERE `first_name` LIKE value;
+        SELECT COUNT(*) INTO result FROM `Employees` WHERE `firstName` LIKE value;
         RETURN result;
     END //
 DELIMITER ;
