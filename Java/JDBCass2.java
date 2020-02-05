@@ -3,12 +3,14 @@
  a. Write an example code for JDBC prepared statement using ResultSet. 
  b. How to get primary key value (auto-generated keys) from inserted queries using JDBC? 
 */
+
+
 import java.sql.*;
 
-class QuestionTwo{
+class JDBCass2{
   private static final String url = "jdbc:mysql://localhost:3306/classicmodels";
-  private static final String user = "root";
-  private static final String pwd = "";
+  private static final String user = "yogesh";
+  private static final String pwd = "yogesh123";
 
   public static void main(String[] args) {
 

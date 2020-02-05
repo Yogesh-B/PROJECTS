@@ -1,3 +1,5 @@
+
+_____________________________________________________________________________demo___________________________________
 drop PROCEDURE if exists Add;
 DELIMITER //
 CREATE PROCEDURE demo.Add(IN enroll1 BIGINT, IN name1 VARCHAR(100), IN dept VARCHAR(50), IN sem INT)
@@ -32,12 +34,65 @@ END//
 DELIMITER ;
 
 
+_______________________________________________________________________________________assignment_____________________
+
+drop PROCEDURE if exists `Add`;
+
+	DELIMITER //
+	CREATE PROCEDURE `Add`(fname VARCHAR(100),lname VARCHAR(100),email VARCHAR(100))
+	BEGIN
+		INSERT INTO `employees`(`firstName`,`lastName`,`email`) VALUES (fname,lname,email);
+	END; //
+
+	DELIMITER ;
+
+drop PROCEDURE if exists `totalRecords`;
+
+DELIMITER //
+CREATE PROCEDURE `totalRecords`(OUT result int)
+BEGIN
+	SELECT COUNT(*) INTO result FROM `Employees`;
+END; //
+
+DELIMITER ;
 
 
 
+DELIMITER //
 
+CREATE FUNCTION totalNameStartingWith(value VARCHAR(10))
+    RETURNS INT
+    BEGIN
+        DECLARE result INT;
+        SELECT COUNT(*) INTO result FROM `employee` WHERE `first_name` LIKE value;
+        RETURN result;
+    END //
+DELIMITER ;
 
+drop PROCEDURE if exists `curdemo`;
 
+DELIMITER //
+CREATE PROCEDURE curdemo(INOUT name_list VARCHAR(4000))
 
+BEGIN
+  DECLARE done INT DEFAULT 0;
+  DECLARE e_name VARCHAR(100) DEFAULT "";
 
+  DECLARE cur1 CURSOR FOR SELECT firstName FROM Employees LIMIT 5;
+  DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
 
+  OPEN cur1;
+
+  get_list: LOOP
+  	FETCH cur1 into e_name;
+  	IF done = 1 THEN
+  		LEAVE get_list;
+  	END IF;
+  	SET name_list = CONCAT(e_name,"\n",name_list);
+  END LOOP get_list;
+
+  CLOSE cur1;
+
+END; //
+
+DELIMITER ;

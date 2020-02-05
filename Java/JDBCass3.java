@@ -8,14 +8,15 @@
  f. How to get column properties from ResultSet using ResultSetMetaData. 
 */
 
+
 import java.sql.*;
 //set classpath=F:\Software\Java\mysql-connector-java-8.0.18\mysql.jar
 
-class QuestionThree{
+class JDBCass3{
 
   private static final String url = "jdbc:mysql://localhost:3306/classicmodels";
-  private static final String user = "root";
-  private static final String pwd = "";
+  private static final String user = "yogesh";
+  private static final String pwd = "yogesh123";
 
     public static void main(String[] args) {
 
@@ -97,3 +98,5 @@ class QuestionThree{
              }
            }
          }
+
+

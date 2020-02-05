@@ -3,15 +3,16 @@
 6. BLOB Write an example for inserting BLOB into table and reading BLOB from table. 
 */
 
+
 import java.sql.*;
 import java.io.*;
 //set classpath=F:\Software\Java\mysql-connector-java-8.0.18\mysql.jar
 
-class QuestionSix{
+class JDBCass6{
 
   private static final String url = "jdbc:mysql://localhost:3306/classicmodels";
-  private static final String user = "root";
-  private static final String pwd = "";
+  private static final String user = "yogesh";
+  private static final String pwd = "yogesh123";
 
   public static void main(String[] args) throws  FileNotFoundException{
     String sql = "INSERT INTO Employees(firstName,lastName,email,resume) VALUES(?,?,?,?)";
@@ -53,3 +54,4 @@ class QuestionSix{
     }
   }
 }
+
