@@ -33,9 +33,9 @@ class JDBCass2{
         //B) Get Auto-Generated Primary Keys Value From JDBC
         sql = "INSERT INTO `Employees`(`firstName`,`lastName`,`email`) VALUES (?,?,?);";
         pstmt = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
-        pstmt.setString(1,"Sonny");
-        pstmt.setString(2,"Lee");
-        pstmt.setString(3,"lee@gmail.com");
+        pstmt.setString(1,"Rohan");
+        pstmt.setString(2,"Patel");
+        pstmt.setString(3,"R.patel@gmail.com");
         pstmt.executeUpdate();
         ResultSet rs = pstmt.getGeneratedKeys();
             if(rs != null && rs.next())
