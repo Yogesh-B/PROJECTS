@@ -30,3 +30,14 @@ BEGIN
 	DELETE FROM Student WHERE Enroll=enroll1;
 END//	
 DELIMITER ;
+
+
+
+
+
+
+
+
+
+
+
