@@ -35,7 +35,6 @@ class InvalidDebitAmount : ApplicationException
 	}
 }
 
-
 class LowBalance : ApplicationException
 {
 	public LowBalance(String msg):base(msg)
@@ -57,7 +56,6 @@ class Account
 		}
 		catch(InvalidOpeningBalance e){
 			Console.WriteLine(e.Message);
-						
 		}
 	}
 	
@@ -117,3 +115,25 @@ public class Test
 		ac1.display();
 	}
 }
+
+
+
+
+
+/*
+
+D:\PROJECTS\dotNet>Pract19
+Enter amount for an account creation(>1000):
+10000
+Balance =10000
+Enter amount to Credit:
+200
+Balance =10200
+Enter amount to Debit:
+500
+Balance =9700
+
+D:\PROJECTS\dotNet>
+
+
+*/
