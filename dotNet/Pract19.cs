@@ -47,10 +47,10 @@ class LowBalance : ApplicationException
 class Account 
 {
 	int bal;
-	public Account(int b)         //open account
+	public Account(int amnt)         //open account
 	{
 		try {
-			if(b<1000)
+			if(amnt<1000)
 				throw new InvalidOpeningBalance("Opening amount must be 1000 or greater...");
 			else	
 				bal=amnt;
@@ -102,8 +102,9 @@ public class Test
 	{
 		Console.WriteLine("Enter amount for an account creation(>1000):");
 		int amount=int.Parse(Console.ReadLine());
-		Console.WriteLine("\n............."+amount+"\n.............");
+		// Console.WriteLine("\n............."+amount+"\n.............");
 		Account ac1=new Account(amount);
+		
 		
 		Console.WriteLine("Enter amount to Credit:");
 		amount=int.Parse(Console.ReadLine());
