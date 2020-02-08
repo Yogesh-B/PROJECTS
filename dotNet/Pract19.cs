@@ -104,7 +104,7 @@ public class Test
 		int amount=int.Parse(Console.ReadLine());
 		// Console.WriteLine("\n............."+amount+"\n.............");
 		Account ac1=new Account(amount);
-		
+		ac1.display();
 		
 		Console.WriteLine("Enter amount to Credit:");
 		amount=int.Parse(Console.ReadLine());
