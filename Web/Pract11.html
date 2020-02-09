@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- 1) Write a HTML code to display student registration form-->
+<html>
+	<head><title>Student Registration Form</title></head>
+	<body>
+		<h1 align="center">Student Registration Form</h1>
+		<form name="st_reg_form" method="POST">
+			<fieldset>
+				<legend>Login Details</legend>
+				User name:<input type="text" name="txt_name"/><br/>
+				Password:<input type="password" name="txt_passwd"/><br/>
+				Email_id:<input type="text" name="txt_mail"/><br/>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Qualification</legend>
+				<input type="checkbox" name="check_10"/>10<sup>th</sup><br/>
+				<input type="checkbox" name="check_12"/>12<sup>th</sup><br/>
+				<input type="checkbox" name="check_diplo"/>Diploma<br/>
+				<input type="checkbox" name="check_degree"/>Degree<br/>
+				<input type="checkbox" name="check_master"/>Master-Degree<br/>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Gender</legend>
+				<input type="radio" name="radio_gen" value="radio_m"/>Male<br/>
+				<input type="radio" name="radio_gen"/>Female<br/>
+			</fieldset>
+
+			<fieldset>
+				<legend>Profession</legend>
+				<select name="select_prof">
+					<option>selects</option>
+				</select>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Lines About You</legend>
+				<textarea name="txt_area_you" placeholder="hello, you are welcome"></textarea>
+			</fieldset><br/><br/>
+
+			<button type="submit" name="submit">Submit</button>
+			<button type="reset" name="reset">Reset</button>
+		</form>
+	</body>
+</html>	
