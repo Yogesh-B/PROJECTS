@@ -63,12 +63,7 @@ public class Test
     {
         StrOp operation;
 		
-        while(true)
-		{
-			Console.WriteLine("Enter a String:");
-			string str=Console.ReadLine();
-			
-			Console.WriteLine("Enter 1 to convert to Upper case.");
+		    Console.WriteLine("Enter 1 to convert to Upper case.");
 			Console.WriteLine("Enter 2 to convert to Lower case.");
 			Console.WriteLine("Enter 3 to convert to Reverse.");
 			Console.WriteLine("Enter 4 to convert to Upper case and Lowercase.");
@@ -76,6 +71,14 @@ public class Test
 			Console.WriteLine("Enter 6 to convert to Lower case and Reverse.");
 			Console.WriteLine("Enter 7 to convert to All.");
 			Console.WriteLine("Enter 8 to Exit.");
+		
+        while(true)
+		{
+			Console.WriteLine("Enter a String:");
+			string str=Console.ReadLine();
+			
+			
+			Console.WriteLine("Enter your choice:");
 			int n=int.Parse(Console.ReadLine());
             if(n==8)
                 break;
@@ -123,5 +126,63 @@ public class Test
     }
 }
 
+/*
 
+
+D:\PROJECTS\dotNet>Pract110
+Enter 1 to convert to Upper case.
+Enter 2 to convert to Lower case.
+Enter 3 to convert to Reverse.
+Enter 4 to convert to Upper case and Lowercase.
+Enter 5 to convert to Upper case and Reverse.
+Enter 6 to convert to Lower case and Reverse.
+Enter 7 to convert to All.
+Enter 8 to Exit.
+Enter a String:
+Yogesh
+Enter your choice:
+1
+YOGESH
+Enter a String:
+Yogesh
+Enter your choice:
+2
+yogesh
+Enter a String:
+Yogesh
+Enter your choice:
+3
+hsegoY
+Enter a String:
+Yogesh
+Enter your choice:
+4
+YOGESH
+yogesh
+Enter a String:
+Yogesh
+Enter your choice:
+5
+YOGESH
+hsegoY
+Enter a String:
+Yogesh
+Enter your choice:
+6
+yogesh
+hsegoY
+Enter a String:
+Yogesh
+Enter your choice:
+7
+YOGESH
+yogesh
+hsegoY
+Enter a String:
+Yogesh
+Enter your choice:
+8
+
+D:\PROJECTS\dotNet>_
+*/
 
