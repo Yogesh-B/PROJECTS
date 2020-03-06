@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--4) Write a HTML code to build a calculator-->
+<html>
+	<head><title>Calculator using HTML</title></head>
+	<body>
+		<form method="POST" name="calc"><center>
+			<table border="2px" cellpadding="3px" cellpadding="4px">
+			<caption>Calculator using HTML</caption>
+				<tr align="center">
+					<td colspan="4"><input type="text" name="text1" value=""/></td>
+				</tr>
+				<tr align="center">
+					<td><input type="button" name="btn1" value="1" onclick="calc.text1.value+='1'"></td>
+					<td><input type="button" name="btn2" value="2" onclick="calc.text1.value+='2'"></td>
+					<td><input type="button" name="btn3" value="3" onclick="calc.text1.value+='3'"></td>
+					<td><input type="button" name="btn+" value="+" onclick="calc.text1.value+='+'"></td>
+				</tr>
+				
+				<tr align="center">
+					<td><input type="button" name="btn4" value="4" onclick="calc.text1.value+='4'"></td>
+					<td><input type="button" name="btn5" value="5" onclick="calc.text1.value+='5'"></td>
+					<td><input type="button" name="btn6" value="6" onclick="calc.text1.value+='6'"></td>
+					<td><input type="button" name="btn-" value="-" onclick="calc.text1.value+='-'"></td>
+				</tr>
+				
+				<tr align="center">
+					<td><input type="button" name="btn7" value="7" onclick="calc.text1.value+='7'"></td>
+					<td><input type="button" name="btn8" value="8" onclick="calc.text1.value+='8'"></td>
+					<td><input type="button" name="btn9" value="9" onclick="calc.text1.value+='9'"></td>
+					<td><input type="button" name="btnx" value="x" onclick="calc.text1.value+='*'"></td>
+				</tr>
+				
+				<tr align="center">
+					<td><input type="button" name="btnc" value="C" onclick="calc.text1.value=''"></td>
+					<td><input type="button" name="btn0" value="0" onclick="calc.text1.value+='0'"></td>
+					<td><input type="button" name="btn=" value="=" onclick="calc.text1.value=eval(calc.text1.value)"></td>
+					<td><input type="button" name="btn/" value="/" onclick="calc.text1.value+='/'"></td>
+				</tr>
+			</table></center>
+		</form>
+		
+	</body>
+</html>	
