@@ -1,0 +1,8 @@
+﻿INSERT INTO [dbo].[result] ([Enrollment], [SPI]) VALUES (170200107001, 8.8)
+INSERT INTO [dbo].[result] ([Enrollment], [SPI]) VALUES (170200107002, 8.6)
+INSERT INTO [dbo].[result] ([Enrollment], [SPI]) VALUES (170200107003, 8.6)
+INSERT INTO [dbo].[result] ([Enrollment], [SPI]) VALUES (170200107004, 8.9)
+INSERT INTO [dbo].[result] ([Enrollment], [SPI]) VALUES (170200107005, 8.7)
+INSERT INTO [dbo].[result] ([Enrollment], [SPI]) VALUES (170200107006, 8.5)
+INSERT INTO [dbo].[result] ([Enrollment], [SPI]) VALUES (170200107007, 8.4)
+INSERT INTO [dbo].[result] ([Enrollment], [SPI]) VALUES (170200107008, 8.3)
