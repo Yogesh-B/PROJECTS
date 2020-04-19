@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- 4) Write a sample program to demonstrate how a user defined objest are created in Javascript? 
+    How a a constructor can be used to populate data object?  -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>User Defined Objects and Constructors</title>
+</head>
+
+<body>
+
+    <h1>User define Object</h1>
+    <div class="object">
+        <input type="text" placeholder="Enter First Name"><br/><br/>
+        <input type="text" placeholder="Enter Middle Name"><br/><br/>
+        <input type="text" placeholder="Enter Last Name"><br/><br/>
+        <input type="text" placeholder="Enter Age"><br/><br/>
+        <input type="text" placeholder="Enter Nationality"><br/><br/>
+        <input type="text" placeholder="Enter State "><br/><br/>
+        <input type="text" placeholder="Enter City"><br/><br/>
+        <input type="button" value="Submit" onclick="createObj()"><br/><br/>
+    </div>
+    <script type="text/javascript">
+        function person(firstName, middleName, lastName, age, nationality, state, city) {
+            this.firstName = firstName;
+            this.middleName = middleName;
+            this.lastName = lastName;
+            this.age = age;
+            this.nation = new Object();
+            this.nation.nationality = nationality;
+            this.nation.state = state;
+            this.nation.city = city;
+            this.show = function showPerson() {
+                var str = "First Name : " + this.firstName + "<br/><br/>" + "Middle Name : " + this.middleName +
+                    "<br/><br/>" + "Last Name : " + this.lastName + "<br/><br/>" + "Age  : " + this.age +
+                    "<br/><br/>" + "Nationality  : " + this.nation.nationality + "<br/><br/>" + "State  : " + this.nation.state + 
+                    "<br/><br/>" + "City  : " + this.nation.city + "<br/><br/>";
+                document.write("<h1>" + str + "</h1>");
+            }
+        }
+        function createObj() {
+            var firstName = document.getElementsByClassName('object')[0]['children'][0].value;
+            var middleName = document.getElementsByClassName('object')[0]['children'][1].value;
+            var lastName = document.getElementsByClassName('object')[0]['children'][2].value;
+            var age = document.getElementsByClassName('object')[0]['children'][3].value;
+            var nationality = document.getElementsByClassName('object')[0]['children'][4].value;
+            var state = document.getElementsByClassName('object')[0]['children'][5].value;
+            var city = document.getElementsByClassName('object')[0]['children'][6].value;
+            var person1 = new person(firstName, middleName, lastName, age, nationality, state, city);
+            person1.show();
+        } 
+    </script>
+</body>
+
+</html>

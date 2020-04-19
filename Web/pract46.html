@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- 6) Write a Javascript to print characters of a string at odd position.  -->
+<html>
+
+<head>
+
+    <title>Character at Odd position</title>
+</head>
+
+<body>
+    <h1>Odd Postion String</h1>
+    <div class="input">
+        <textarea name="string1" rows="8" cols="80" placeholder="Enter String... "></textarea>
+        <button type="button" onclick="callFunction()">Submit</button>
+    </div>
+    <form name="form">
+        <textarea name="output" rows="8" cols="80" disabled placeholder="Output... "></textarea>
+    </form>
+    <script type="text/javascript">
+        function callFunction() {
+            var string1 = " " + document.getElementsByClassName('input')[0]['children'][0].value;
+            var result = "";
+            for (var t = 0; t < string1.length; t++)
+                if (t % 2 != 0)
+                    result += string1[t] + " ";
+            form.output.value = result;
+        } 
+    </script>
+</body>
+
+</html>

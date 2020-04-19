@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- 3) Write a Javascript program to calculate area of triangle and rectangle. -->
+<html>
+
+<head>
+    <title> Area of Triangle/Rectangle </title>
+</head>
+
+<body>
+    
+    <h1>Area Calculation</h1>
+    <div class="triangle">
+        <h2>Triangle Details</h2>
+        <input type="text" placeholder="Enter Base Value"><br><br>
+        <input type="text" placeholder="Enter Height Value"><br><br>
+        <input type="button" value="Submit" onClick="t_area()"><br><br>
+    </div>
+    <div class="rectangle">
+        <h2>Rectangle Details</h2>
+        <input type="text" name="width" placeholder="Enter Width Value"><br><br>
+        <input type="text" name="height" placeholder="Enter Height Value"><br><br>
+        <button type="submit" onclick="r_area()">Submit</button><br><br>
+    </div>
+
+
+    <script type="text/javascript">
+        function t_area() {
+            var base = document.getElementsByClassName('triangle')[0]['children'][1].value;
+            var height = document.getElementsByClassName('triangle')[0]['children'][4].value;
+            var area = base * height * 0.5;
+            form.displayResult.value = "Area of Triangle is  : " + area;
+        }
+
+        function r_area() {
+            var width = document.getElementsByClassName('rectangle')[0]['children'][1].value;
+            var height = document.getElementsByClassName('rectangle')[0]['children'][4].value;
+            var area = width * height;
+            form.displayResult.value = "Area of Rectangle is  : " + area;
+        } 
+    </script>
+</body>
+
+<form name="form">
+    <input type="text" placeholder="Answer" name="displayResult" style="width:300px" disabled></h2>
+</form>
+
+</html>

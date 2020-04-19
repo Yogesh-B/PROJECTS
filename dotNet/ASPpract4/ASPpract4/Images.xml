@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/Images/ad1.jpg</ImageUrl>
+    <NavigateUrl>http://google.com</NavigateUrl>
+    <AlternateText>A sample ad</AlternateText>
+    <Impressions>12</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/Images/ad2.jpg</ImageUrl>
+    <NavigateUrl>http://google.com</NavigateUrl>
+    <AlternateText>A sample ad</AlternateText>
+    <Impressions>13</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/Images/ad3.jpg</ImageUrl>
+    <NavigateUrl>http://google.com</NavigateUrl>
+    <AlternateText>A sample ad</AlternateText>
+    <Impressions>14</Impressions>
+  </Ad>
+</Advertisements>

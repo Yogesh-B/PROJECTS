@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- 1) Write javascript code to validate username and password (password length must between 6 to
+     12 characters. User name should not start with _,@, or any number, both are not blank).  -->
+<html>
+
+<head>
+    <title>User Validation</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        <div class="form">
+            <input type="text" name="txt_user" placeholder="User Name" required /><br /><br />
+            <input type="password" name="txt_password" placeholder="Password" required /><br /><br />
+            <button type="submit" onclick="Validate()">Log in</button>
+        </div>
+    </form>
+    <h3 id="message"></h3>
+
+    <script type="text/javascript">
+        function Validate() {
+            var user = document.getElementsByClassName("form")[0]['children'][0].value;
+            var password = document.getElementsByClassName("form")[0]['children'][3].value;
+            var message;
+            if (password.length >= 6 && password.length <= 12)
+                if (user.startsWith("_") || user.startsWith("@") || user.match(/^\d/))
+                    message = "Username is not Valid";
+                else {
+                    document.write("<h1>Login Successful</h1>");
+                    return true;
+                }
+            else
+                message = "Password is not Valid";
+
+            var node = document.createElement("p");
+            var textnode = document.createTextNode(message);
+            node.appendChild(textnode);
+            document.getElementById("message").appendChild(node);
+            return false;
+        }
+    </script>
+</body>
+
+</html>

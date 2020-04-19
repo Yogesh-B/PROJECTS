@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- 4) Write the following styles in separate CSS file and also show how to link this 
+    CSS file inHTML file and show use of styles. 
+    (a) The headings should have normal font style and font size should be 120%. 
+    (b)Define a class arial for paragraph width defines font family.
+     (c)Apply a background color yellow and apply a background image “abcd.jpg”. -->
+     <html>
+         <head>
+             <title>CSS Font Styles</title>
+             <style>
+                 .heading{
+                     font-size:120%;
+                 }
+                 .arial{
+                     font-family: arial;
+                 }
+                 .coloredText{
+                     background-color:yellow;
+                 }
+                 body{
+                     background-image: url("./Images/logo.png") ;
+                     background-size: cover;
+                 }
+             </style>
+         </head>
+         <body>
+             <p>This is Normal text without any CSS added within...!!!</p>
+             <p class="heading">This is a Heading with 120% size</p>
+             <p class="arial">This paragraph has class as "arial"...</p>
+             <p class="coloredText">This paragraph has Yellow Colored Text and a Background Image</p>
+         </body>
+     </html>

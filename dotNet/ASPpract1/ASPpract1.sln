@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPpract1", "ASPpract1\ASPpract1.csproj", "{1470B456-1B59-4165-9BE7-AC728976285F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1470B456-1B59-4165-9BE7-AC728976285F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1470B456-1B59-4165-9BE7-AC728976285F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1470B456-1B59-4165-9BE7-AC728976285F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1470B456-1B59-4165-9BE7-AC728976285F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58EA972C-524D-4A3E-8364-AA8F3DECEC44}
+	EndGlobalSection
+EndGlobal

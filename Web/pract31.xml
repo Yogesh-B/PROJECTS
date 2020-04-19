@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="./student.xsl"?>
+<!-- 1) To Design an XML document to store information about a student in an engineering college affiliated 
+to GTU. The information must include RollNo, Name, Name of the College, Branch, Year of Joining, and email id.
+ Make up sample data for 5 students. Create a CSS style sheet and use it to display the document. -->
+<student>
+    <object>
+        <rollNo>170200107001</rollNo>
+        <name>Yogesh</name>
+        <college>GEC Rajkot</college>
+        <branch>CE</branch>
+        <joinYear>2017</joinYear>
+        <email>yogesh@gmail.com</email>
+    </object>
+    <object>
+        <rollNo>170200107002</rollNo>
+        <name>Rajesh</name>
+        <college>GEC Bhuj</college>
+        <branch>MECH</branch>
+        <joinYear>2019</joinYear>
+        <email>rajesh@gmail.com</email>
+    </object>
+    <object>
+        <rollNo>170200107003</rollNo>
+        <name>Komal</name>
+        <college>GEC Bhavnagar</college>
+        <branch>EC</branch>
+        <joinYear>2020</joinYear>
+        <email>komal@gmail.com</email>
+    </object>
+    <object>
+        <rollNo>170200107004</rollNo>
+        <name>Subhash</name>
+        <college>GEC Gandhinagar</college>
+        <branch>Computer</branch>
+        <joinYear>2018</joinYear>
+        <email>subhash@gmail.com</email>
+    </object>
+    <object>
+        <rollNo>170200107005</rollNo>
+        <name>Lalit</name>
+        <college>GEC Bhuj</college>
+        <branch>IC</branch>
+        <joinYear>2021</joinYear>
+        <email>lalit@gmail.com</email>
+    </object>
+</student>

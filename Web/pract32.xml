@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<employee>
+    <object>
+        <id>1</id>
+        <name>Yogesh</name>
+        <email>yogesh@gmail.com</email>
+        <contact>1234567890</contact>
+        <address>Barvala Bavishi, Amreli</address>
+        <salary>6500000</salary>
+    </object>
+    <object>
+        <id>2</id>
+        <name>Mohan</name>
+        <email>mohan@gmail.com</email>
+        <contact>4561237890</contact>
+        <address>Mavdi, Rajkot</address>
+        <salary>4550000</salary>
+    </object>
+    <object>
+        <id>3</id>
+        <name>Ramesh</name>
+        <email>ramesh@gmail.com</email>
+        <contact>9876543210</contact>
+        <address>Kankot, Rajkot</address>
+        <salary>1200000</salary>
+    </object>
+    <object>
+        <id>3</id>
+        <name>Parul</name>
+        <email>parul@gmail.com</email>
+        <contact>4566546540</contact>
+        <address>Mota Mava, Rajkot</address>
+        <salary>3400000</salary>
+    </object>
+   
+</employee>
+
+
+<!-- 2) Create XML page to store employee information.  -->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- 5) Write a Javascript to take 2 digit number and then separate this two digits then multiply 
+    first digit by itself for second digit times. -->
+<html>
+
+<head>
+
+    <title>Multiply Digit1 by Digit2</title>
+</head>
+
+<body>
+    <h1>Multiply Digit1 by Digit2</h1>
+    <div class="Number">
+        <input type="text" placeholder="Enter Two Digit Number ">
+        <button type="button" onclick="callFunction()">Submit</button>
+    </div>
+    <form name="form">
+        <input type="text" name="displayResult" placeholder="Answer" disabled>
+    </form>
+
+
+    
+    <script type="text/javascript">
+        function callFunction() {
+            var number = Math.floor(document.getElementsByClassName('Number')[0]['children'][0].value);
+            if (number > 9 && number < 100) {
+                var num1 = Math.floor(number / 10);
+                var num2 = (number - (10 * num1));
+                var result = 1;
+                for (var i = 0; i < num2; i++)
+                    result = result * num1;
+                form.displayResult.value = "Answer is : " + result;
+            }
+            else {
+                form.displayResult.value = "Number is not Valid";
+            }
+        } 
+    </script>
+</body>
+
+</html>
