@@ -56,3 +56,4 @@ D:\PROJECTS\dotNet\ASPpract4\ASPpract4\bin\Microsoft.CodeDom.Providers.DotNetCom
 D:\PROJECTS\dotNet\ASPpract4\ASPpract4\obj\Debug\ASPpract4.csproj.CopyComplete
 D:\PROJECTS\dotNet\ASPpract4\ASPpract4\obj\Debug\ASPpract4.dll
 D:\PROJECTS\dotNet\ASPpract4\ASPpract4\obj\Debug\ASPpract4.pdb
+D:\PROJECTS\dotNet\ASPpract4\ASPpract4\obj\Debug\ASPpract4.csproj.CoreCompileInputs.cache
