@@ -52,7 +52,7 @@ D:\PROJECTS\dotNet\ASPpract1\ASPpract1\bin\roslyn\VBCSCompiler.exe
 D:\PROJECTS\dotNet\ASPpract1\ASPpract1\bin\roslyn\VBCSCompiler.exe.config
 D:\PROJECTS\dotNet\ASPpract1\ASPpract1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\PROJECTS\dotNet\ASPpract1\ASPpract1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\PROJECTS\dotNet\ASPpract1\ASPpract1\obj\Debug\ASPpract1.csprojAssemblyReference.cache
 D:\PROJECTS\dotNet\ASPpract1\ASPpract1\obj\Debug\ASPpract1.csproj.CopyComplete
 D:\PROJECTS\dotNet\ASPpract1\ASPpract1\obj\Debug\ASPpract1.dll
 D:\PROJECTS\dotNet\ASPpract1\ASPpract1\obj\Debug\ASPpract1.pdb
+D:\PROJECTS\dotNet\ASPpract1\ASPpract1\obj\Debug\ASPpract1.csproj.CoreCompileInputs.cache
