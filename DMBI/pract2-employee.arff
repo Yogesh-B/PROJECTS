@@ -1,0 +1,18 @@
+%pract2 Create an Employee Table with the help of Data
+%Mining Tool WEKA.
+
+
+%this is a employee table
+@relation Employee
+@attribute EName string
+@attribute ESalary {low, medium, high}
+@attribute EDOB date "dd-mm-yyyy"
+@attribute ELeavesTaken numeric
+@data
+ "Ramesh", "high", "24-02-1999", 23
+ "Mohan", "medium", "12-03-2001", 12
+ "Rohan", "high", "10-04-1998", 10
+ "Kalpesh", "medium", "11-05-1999", 20
+ "Naresh", "low", "22-06-2000", 16
+ "Jayesh", "high", "03-03-2000", 21
+ "Lokesh", "low", "16-06-1999", 20

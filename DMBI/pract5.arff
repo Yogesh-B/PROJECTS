@@ -1,0 +1,23 @@
+@relation buying
+
+@attribute Milk {T,F}
+@attribute Bread {T,F}
+@attribute Butter {T,F}
+@attribute Beer  {T,F}
+
+@data
+T,T,F,F
+F,T,T,F
+F,F,F,T
+T,T,T,F
+F,T,F,F
+T,F,F,F
+F,T,T,T
+T,T,T,T
+F,T,F,T
+T,F,F,F
+F,F,F,T
+T,T,T,F
+T,T,F,F
+T,F,T,F
+T,T,T,T

@@ -1,0 +1,14 @@
+@relation data1
+
+@attribute item1 string
+@attribute quantity1 numeric
+@attribute item2 string
+@attribute quantity2 numeric
+
+@data
+Banana,5,Apple,4
+Banana,4,Apple,3
+Mango,3,Unknown,5
+Mango,4,Banana,6
+Apple,4,Unknown,4.8
+Orange,4,Mango,6

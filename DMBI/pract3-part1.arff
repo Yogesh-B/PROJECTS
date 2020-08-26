@@ -1,0 +1,14 @@
+% pract3 Apply Pre-processing on Data Set Using Weka
+@relation "data1"
+@attribute "item1" string
+@attribute "quantity1" numeric
+@attribute "item2" string
+@attribute "quantity2" numeric
+@data
+"Banana", 5, "Apple", 4
+"Banana", ?, "Apple", 3 
+"Mango", 3, ?, 5
+"Mango",? , "Banana", 6
+"Apple", 4, ?, ?
+"Orange",4 , "Mango", 6
+  
