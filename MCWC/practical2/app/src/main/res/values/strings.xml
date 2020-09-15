@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Practical2</string>
+    <string name="scanBtnTxt">Start Scan</string>
+</resources>

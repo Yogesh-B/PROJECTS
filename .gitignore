@@ -2,3 +2,4 @@
 .gradle/
 *.exe
 *.o
+build/
