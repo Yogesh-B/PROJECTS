@@ -7,15 +7,18 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
     EditText main_editor;
     private static final int STORAGE_PERMISSION_CODE = 101;
+//    public static final String ACTION_OPEN_DOCUMENT = "open_file"
+    private static Uri file_path;
 
 
     @Override
@@ -73,21 +78,27 @@ public class MainActivity extends AppCompatActivity {
             case R.id.save_file:
                 //showHelp();
                 Toast.makeText(this,"Save Button Clicked!!!",Toast.LENGTH_SHORT).show();
+                saveFile();
                 return true;
             case R.id.close_file:
-                Toast.makeText(this,"Close Button Clicked!!!",Toast.LENGTH_SHORT).show();
-
-//                AlertDialog.Builder alert_close = new AlertDialog.Builder(this);
-//                alert_close.setTitle("TextEditor:");
-//                alert_close.setMessage("Unsaved work will be lost. Are you sure to exit? ");
-//                alert_close.setNegativeButton(android.R.string.no,null);
-//                alert_close.setPositiveButton(android.R.string.yes,DialogInterface.OnClickListener(){
-//
-//                });
-                Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.addCategory(Intent.CATEGORY_HOME);
-                startActivity(intent);
-
+                AlertDialog.Builder alert_close = new AlertDialog.Builder(MainActivity.this);
+                alert_close.setTitle("TextEditor:");
+                alert_close.setMessage("Unsaved work will be lost. Are you sure to exit?");
+                alert_close.setNegativeButton("No",null);
+                alert_close.setPositiveButton("Yes",new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface diag1,int id){
+                        finish();
+                    }
+                });
+                alert_close.setNeutralButton("Save File",new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface diag1,int id){
+                        Toast.makeText( MainActivity.this,"Saving file before exit!!!",Toast.LENGTH_SHORT).show();
+                        saveFile();
+                    }
+                });
+                alert_close.show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -110,6 +121,33 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,"Storage Permission Denied",Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+
+    private void saveFile(){
+        final TextView messageSaveFile = (TextView)findViewById(R.id.textView_save);
+        final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+        View mView = getLayoutInflater().inflate(R.layout.custom_dialog,null);
+        final EditText txt_inputText = (EditText) mView.findViewById(R.id.editText_save);
+        Button btn_cancel = (Button)mView.findViewById(R.id.btnCancel_save);
+        Button btn_okay = (Button)mView.findViewById(R.id.btnSave_save);
+        alert.setView(mView);
+        final AlertDialog alertDialog = alert.create();
+        alertDialog.setCanceledOnTouchOutside(false);
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
+        btn_okay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(this,"Just worked!!",Toast.LENGTH_SHORT).show();
+                alertDialog.dismiss();
+            }
+        });
+        alertDialog.show();
     }
 
 
