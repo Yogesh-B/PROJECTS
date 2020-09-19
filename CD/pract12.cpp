@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <string.h>
+#include <bits/stdc++.h>
+#include <iostream>
 #define rowSize 20
 #define colSize 20
+using namespace std;
 
 // LALR Function
 void createTable();
