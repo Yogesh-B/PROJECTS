@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
         btn_okay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(this,"Just worked!!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,"Just worked!!",Toast.LENGTH_SHORT).show();
                 alertDialog.dismiss();
             }
         });

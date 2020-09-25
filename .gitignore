@@ -3,3 +3,7 @@
 *.exe
 *.o
 build/
+.vs/
+dotNet/**/packages/
+dotNet/**/bin/
+dotNet/**/obj/
