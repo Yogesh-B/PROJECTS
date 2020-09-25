@@ -1,9 +1,0 @@
-D:\PROJECTS\dotNet\WinApp3_2\WinApp3_2\bin\Debug\WinApp3_2.exe.config
-D:\PROJECTS\dotNet\WinApp3_2\WinApp3_2\bin\Debug\WinApp3_2.exe
-D:\PROJECTS\dotNet\WinApp3_2\WinApp3_2\bin\Debug\WinApp3_2.pdb
-D:\PROJECTS\dotNet\WinApp3_2\WinApp3_2\obj\Debug\WinApp3_2.csprojAssemblyReference.cache
-D:\PROJECTS\dotNet\WinApp3_2\WinApp3_2\obj\Debug\WinApp3_2.Form1.resources
-D:\PROJECTS\dotNet\WinApp3_2\WinApp3_2\obj\Debug\WinApp3_2.Properties.Resources.resources
-D:\PROJECTS\dotNet\WinApp3_2\WinApp3_2\obj\Debug\WinApp3_2.csproj.GenerateResource.cache
-D:\PROJECTS\dotNet\WinApp3_2\WinApp3_2\obj\Debug\WinApp3_2.exe
-D:\PROJECTS\dotNet\WinApp3_2\WinApp3_2\obj\Debug\WinApp3_2.pdb
