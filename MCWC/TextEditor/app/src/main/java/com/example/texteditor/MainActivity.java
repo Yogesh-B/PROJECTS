@@ -1,11 +1,13 @@
 package com.example.texteditor;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import  java.util.regex.*;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -14,6 +16,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.DocumentsProvider;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -23,13 +27,22 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class MainActivity extends AppCompatActivity {
 
-
-    EditText main_editor;
+    public static int PICK_FILE = 1;
+    private  EditText mainEditor;
+    private Intent openFileIntent;
     private static final int STORAGE_PERMISSION_CODE = 101;
 //    public static final String ACTION_OPEN_DOCUMENT = "open_file"
     private static Uri file_path;
+    private String filePath;
 
 
     @Override
@@ -39,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         //check permissions
         checkPermissionStatus(new String[] {Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE});
         //get ids
-        main_editor = findViewById(R.id.editText1);
+        mainEditor = findViewById(R.id.editText1);
 
 
 
@@ -61,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //menu items creation
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -68,16 +82,15 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    //menu item selected
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.open_file:
                 //newGame();
-                Toast.makeText(this,"Open Button Clicked!!!",Toast.LENGTH_SHORT).show();
+                openFile();
                 return true;
             case R.id.save_file:
-                //showHelp();
-                Toast.makeText(this,"Save Button Clicked!!!",Toast.LENGTH_SHORT).show();
                 saveFile();
                 return true;
             case R.id.close_file:
@@ -106,10 +119,54 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //file open option
+    private void openFile() {
+        openFileIntent = new Intent(Intent.ACTION_GET_CONTENT);
+        openFileIntent.setType("text/plain");
+        startActivityForResult(openFileIntent,PICK_FILE);
+
+    }
+
+    //openfile subfunction
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode==PICK_FILE){
+                if(resultCode==RESULT_OK){
+
+                    filePath=data.getData().getPath();
+                    file_path=data.getData();
+                    Toast.makeText(MainActivity.this,filePath+"Opened!",Toast.LENGTH_SHORT).show();
+                    String fileContent = readTextFile(file_path);
+                    mainEditor.setText(fileContent);
+
+                }
+        }
+    }
+
+    //openfile subfuntion2
+    private String readTextFile(Uri file_path) {
+        BufferedReader reader = null;
+        StringBuilder builder = new StringBuilder();
+
+        try {
+            reader = new BufferedReader(new InputStreamReader(getContentResolver().openInputStream(file_path)));
+            String line = "";
+            while ((line = reader.readLine()) != null)
+            {
+                builder.append(line+"\n");
+            }
+            reader.close();
+        }
+        catch (IOException e) { e.printStackTrace(); }
+        return builder.toString();
+    }
+
+    //setting file name on actionbar
     protected void setActionBarText(String str){
 
     }
 
+    //permission  request
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,@NonNull int[] grantResults){
         super.onRequestPermissionsResult(requestCode,permissions,grantResults);
@@ -124,6 +181,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //file save option
     private void saveFile(){
         final TextView messageSaveFile = (TextView)findViewById(R.id.textView_save);
         final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
@@ -143,12 +201,58 @@ public class MainActivity extends AppCompatActivity {
         btn_okay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Just worked!!",Toast.LENGTH_SHORT).show();
+                filePath=txt_inputText.getText().toString();
+                try {
+                    writeFileToStorage(filePath);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 alertDialog.dismiss();
             }
         });
         alertDialog.show();
+
     }
+
+    private void  writeFileToStorage(String path) throws IOException {
+        String state = Environment.getExternalStorageState();
+
+        if(Environment.MEDIA_MOUNTED.equals(state)){
+            File root = Environment.getExternalStorageDirectory();
+            File folderPath = new File(root.getAbsolutePath()+"/TextEditor");
+            //to be devided into folder path and file name using pattern in future release
+            //also directory chooser to be added
+            if(!folderPath.exists()){
+                folderPath.mkdir();
+                Toast.makeText(getApplicationContext(),"FOLDER CREATED",Toast.LENGTH_SHORT).show();
+
+            }
+            File file = new File(folderPath, filePath);
+            if(!file.exists()){
+                file.createNewFile();
+                Toast.makeText(getApplicationContext(),filePath+" file saved",Toast.LENGTH_SHORT).show();
+            }
+            String textData = mainEditor.getText().toString();
+            try {
+                FileOutputStream fos = new FileOutputStream(file);
+                fos.write(textData.getBytes());
+                Toast.makeText(getApplicationContext(),"data to file written and saved",Toast.LENGTH_SHORT).show();
+                fos.close();
+            } catch (Exception e) {
+                mainEditor.setText(mainEditor.getText() +"  \n\n" +e.toString());
+                Toast.makeText(getApplicationContext(),"Toast of exception",Toast.LENGTH_SHORT).show();
+            }
+
+
+        }
+        else{
+            Toast.makeText(getApplicationContext(),"File not saving error!!!",Toast.LENGTH_LONG).show();
+        }
+
+
+
+    }
+
 
 
 }

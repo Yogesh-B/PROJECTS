@@ -4,6 +4,8 @@ android {
     compileSdkVersion 29
     buildToolsVersion "30.0.0"
 
+
+
     defaultConfig {
         applicationId "com.example.texteditor"
         minSdkVersion 21

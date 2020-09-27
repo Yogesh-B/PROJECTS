@@ -3,5 +3,7 @@
     <string name="save_file">Save</string>
     <string name="open_file">Open</string>
     <string name="close_file">Close</string>
-    <string name="enter_your_message">Enter your Message</string>
+    <string name="save_path_sdcard">Save Path sdcard/:</string>
+    <string name="enter_path">Enter path</string>
+
 </resources>
