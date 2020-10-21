@@ -1,0 +1,6 @@
+@attribute performance {good, avg, poor}
+@data
+%
+25, 10k, ?
+35, 32k, ?
+%

@@ -1,0 +1,8 @@
+@relation Customer
+@attribute Refund {Yes,No}
+@attribute Marital_status {Single, Married, Divorced}
+@attribute Taxable_Income numeric
+@attribute Evade {Yes, No}
+
+@data
+No,Married,120,?

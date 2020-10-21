@@ -1,0 +1,8 @@
+@relation customer_test
+@attribute name {x,y,z,u,v,l,w,q,r,n}
+@attribute age {youth,middle,senior}
+@attribute income {high,medium,low}
+@attribute class {A,B}
+@data
+x,youth,high,?
+v,senior,high,?

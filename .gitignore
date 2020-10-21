@@ -7,3 +7,5 @@ build/
 dotNet/**/packages/
 dotNet/**/bin/
 dotNet/**/obj/
+.vscode
+*.class

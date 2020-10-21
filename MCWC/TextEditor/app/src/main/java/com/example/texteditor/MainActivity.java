@@ -2,22 +2,26 @@ package com.example.texteditor;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import java.net.URI;
 import  java.util.regex.*;
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.DocumentsProvider;
+import android.provider.MediaStore;
+import android.provider.OpenableColumns;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -54,10 +58,6 @@ public class MainActivity extends AppCompatActivity {
         //get ids
         mainEditor = findViewById(R.id.editText1);
 
-
-
-        //method call for Option Set
-        //onCreateOptionsMenu();
 
 
     }
@@ -124,7 +124,18 @@ public class MainActivity extends AppCompatActivity {
         openFileIntent = new Intent(Intent.ACTION_GET_CONTENT);
         openFileIntent.setType("text/plain");
         startActivityForResult(openFileIntent,PICK_FILE);
+        setFileName();
 
+
+    }
+
+
+    //FileName set for ActionBar when opened/saved
+    private void setFileName() {
+//        ActionBar act = getActionBar();
+//        act.setTitle(file_path.getLastPathSegment().toString());
+
+   
     }
 
     //openfile subfunction
@@ -135,7 +146,8 @@ public class MainActivity extends AppCompatActivity {
 
                     filePath=data.getData().getPath();
                     file_path=data.getData();
-                    Toast.makeText(MainActivity.this,filePath+"Opened!",Toast.LENGTH_SHORT).show();
+                    String str=data.getData().getLastPathSegment();
+                    Toast.makeText(MainActivity.this,filePath+" Opened!  ",Toast.LENGTH_SHORT).show();
                     String fileContent = readTextFile(file_path);
                     mainEditor.setText(fileContent);
 
@@ -144,12 +156,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //openfile subfuntion2
-    private String readTextFile(Uri file_path) {
+    private String readTextFile(Uri file_path1) {
         BufferedReader reader = null;
         StringBuilder builder = new StringBuilder();
 
         try {
-            reader = new BufferedReader(new InputStreamReader(getContentResolver().openInputStream(file_path)));
+            reader = new BufferedReader(new InputStreamReader(getContentResolver().openInputStream(file_path1)));
             String line = "";
             while ((line = reader.readLine()) != null)
             {
@@ -161,10 +173,6 @@ public class MainActivity extends AppCompatActivity {
         return builder.toString();
     }
 
-    //setting file name on actionbar
-    protected void setActionBarText(String str){
-
-    }
 
     //permission  request
     @Override
@@ -211,6 +219,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         alertDialog.show();
+        setFileName();
 
     }
 

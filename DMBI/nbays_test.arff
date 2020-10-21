@@ -1,0 +1,11 @@
+@relation Purchase_Test
+@attribute age {<=30, 31...40, >40}
+@attribute income {low, medium, high}
+@attribute student {yes, no}
+@attribute credit_rating {fair, excellent}
+@attribute buys_computer {yes, no}
+@data
+<=30,medium,yes,fair,?
+
+
+

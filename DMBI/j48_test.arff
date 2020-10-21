@@ -1,0 +1,9 @@
+@relation weather_test
+@attribute outlook {sunny, rainy, overcast}
+@attribute temperature numeric
+@attribute humidity numeric
+@attribute windy {TRUE, FALSE}
+@attribute play {yes, no}
+@data
+rainy,76,88,FALSE,?
+overcast,78,86,TRUE,?

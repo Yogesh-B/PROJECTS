@@ -1,0 +1,5 @@
+@relation linear_regression
+@attribute X numeric
+@attribute Y numeric
+@data
+90,?
