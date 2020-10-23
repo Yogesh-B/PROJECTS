@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Practical2</string>
-    <string name="scanBtnTxt">Start Scan</string>
+    <string name="paired_list_text">Paired Devices</string>
+    <string name="no_devices_connected">No devices found!</string>
 </resources>

@@ -10,13 +10,12 @@
         android:id="@+id/btn_clickHere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="283dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="28dp"
         android:text="@string/click_here"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.771"
+        app:layout_constraintStart_toEndOf="@+id/txt_messageInput"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -25,11 +24,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="57dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/message_input"
-        app:layout_constraintEnd_toStartOf="@+id/btn_clickHere"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,4 +42,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_messageInput" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

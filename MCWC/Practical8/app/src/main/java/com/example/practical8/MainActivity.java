@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
     Button btn_clickHere;
     TextView txt_messageOutput;
     EditText txt_messageInput;
@@ -25,23 +26,15 @@ public class MainActivity extends AppCompatActivity {
         txt_messageOutput = findViewById(R.id.txt_messageOutput);
 
 
-
-
-
-
         btn_clickHere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String message = "Welcome, "+(txt_messageInput.getText());
+                String message = "Hello, "+(txt_messageInput.getText());
                 txt_messageOutput.setText(message);
                 Toast toast = Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT);
                 toast.show();
             }
         });
 
-
-
     }
-
-
 }
