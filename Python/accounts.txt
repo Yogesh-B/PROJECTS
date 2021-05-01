@@ -1,0 +1,14 @@
+101 Rajkot 2000.00
+102 Rajkot 5000.52
+103 Surat 5000.62
+104 Ahmedabad 8000.14
+105 Jamnagar 9000.62
+106 Surat 8000.00
+107 Ahmedabad 8000.00
+108 Jamnagar 9000.00
+109 Surat 8000.00
+110 Ahmedabad 8000.00
+111 Jamnagar 9000.00
+112 Ahmedabad 8000.00
+113 Jamnagar 9000.00
+114 Surat 1000.00
