@@ -3,8 +3,6 @@
 #old.
 from datetime import datetime
 
-
-
 name = input("Please Enter Your First Name : ")
 age = input("Please Enter Your Age At This Moment (In years, INT only) : ")
 
